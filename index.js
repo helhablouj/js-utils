@@ -7,9 +7,8 @@ function getProperty(obj, pathToProp, defaultValue = undefined , resValidation =
     }
 
     const newPath = pathToProp.substring(pathToProp.indexOf('.') + 1, pathToProp.length);
-    const dotIndex = newPath.indexOf('.');
 
-    if(dotIndex === -1){
+    if(newPath.indexOf('.') === -1){
         return (resValidation(obj[newPath]) && obj[newPath] !== undefined) ? obj[newPath] : defaultValue;
     }
     else {
