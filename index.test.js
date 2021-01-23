@@ -27,9 +27,7 @@ test('Get a specific value', () => {
   expect(
     getProperty(
       world, 
-      "world.countries.morocco.taroudant.person2.name", 
-      // '', 
-      // res => typeof res === "string"
+      "world.countries.morocco.taroudant.person2.name"
   )
   ).toBe("Bouchta");
 });
@@ -48,7 +46,7 @@ test('validate return type', () => {
 });
 
 
-test('Get back default value if validation fails', () => {
+test('Get back default value when validation fails', () => {
   expect(
     getProperty(
       world, 
@@ -73,7 +71,7 @@ test("Get back the default value when property doesn't exist", () => {
 });
 
 
-test('Get default value (undefined) if function called with unexpected parameter types', () => {
+test('Get back the default value (undefined) if function called with unexpected parameter types', () => {
   expect(
     getProperty(
       "gimmi something"
