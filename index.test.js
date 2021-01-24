@@ -78,3 +78,15 @@ test('Get back the default value (undefined) if function called with unexpected 
     )
   ).toBe(undefined);
 });
+
+
+it('Should return default value if passed validation param is not a function', () => {
+  expect(
+    getProperty(
+      world, 
+      "world.countries.morocco.taroudant.person2.namaywa",
+      'walo',
+      "ahhaha"
+    )
+  ).toBe('walo');
+});

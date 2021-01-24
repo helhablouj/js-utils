@@ -1,6 +1,8 @@
 
 function getProperty(obj, pathToProp, defaultValue = undefined , resValidation = res => true) {
-    const paramsAreValid = typeof obj === "object" && obj !== null && typeof pathToProp === 'string' && pathToProp !== null;
+    const paramsAreValid = typeof obj === "object" && obj !== null 
+                            && typeof pathToProp === 'string' && pathToProp !== null 
+                            && typeof resValidation === 'function' ;
     if(!paramsAreValid){
         // console.log('Invalid parameters or wrong path');
         return defaultValue;
