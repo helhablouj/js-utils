@@ -11,7 +11,7 @@ function getProperty(obj, pathToProp, defaultValue = undefined , resValidation =
     const newPath = pathToProp.substring(pathToProp.indexOf('.') + 1, pathToProp.length);
 
     if(newPath.indexOf('.') === -1){
-        return (resValidation(obj[newPath]) && obj[newPath] !== undefined) ? obj[newPath] : defaultValue;
+        return (resValidation(obj[newPath]) === true && obj[newPath] !== undefined) ? obj[newPath] : defaultValue;
     }
     else {
         const propName = newPath.substring(0, newPath.indexOf('.'));

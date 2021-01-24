@@ -84,9 +84,9 @@ it('Should return default value if passed validation param is not a function', (
   expect(
     getProperty(
       world, 
-      "world.countries.morocco.taroudant.person2.namaywa",
+      "world.countries.morocco.taroudant.person2.name",
       'walo',
-      "ahhaha"
+      {}
     )
   ).toBe('walo');
 });
